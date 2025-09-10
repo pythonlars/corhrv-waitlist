@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorHRV - Professional HRV Tracking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="CorHRV Logo" class="logo-img">
+                <span class="logo-text">CorHRV</span>
+            </div>
+            <button class="admin-btn" id="adminBtn">
+                👤 Admin
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="badge">Professional HRV Tracking</div>
+                
+                <h1 class="hero-title">
+                    Track your HRV like a pro. Free.<br>
+                    Simple. Accurate.
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Get professional-level Heart Rate Variability tracking with your Polar H10.<br>
+                    No subscriptions needed, no complicated setup.
+                </p>
+                
+                <!-- Signup Form -->
+                <div class="signup-form">
+                    <form id="waitlistForm">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Your name" 
+                            required
+                            class="form-input"
+                        >
+                        
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Email address" 
+                            required
+                            class="form-input"
+                        >
+                        
+                        <input 
+                            type="text" 
+                            id="hrv_tool" 
+                            name="hrv_tool" 
+                            placeholder="Current HRV tool (optional)"
+                            class="form-input"
+                        >
+                        
+                        <button type="submit" class="submit-btn">
+                            ✉️ Join the Waitlist
+                        </button>
+                    </form>
+                    
+                    <p class="waitlist-count">
+                        Join <span id="waitlistCount">2+</span> people already on the waitlist • No spam, ever
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">How CorHRV Helps You</h2>
+                <p class="section-subtitle">Transform your Polar H10 into a professional HRV monitoring system</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 12L7 8L13 14L21 6" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V6C3 4.89543 3.89543 4 5 4H13" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Measure</h3>
+                        <p>Records raw RR intervals from your Polar H10 with scientific precision</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="#3b5bdb"/>
+                                <path d="M19 15L20.09 18.26L23 19L20.09 19.74L19 23L17.91 19.74L15 19L17.91 18.26L19 15Z" fill="#3b5bdb"/>
+                                <path d="M5 6L5.5 7.5L7 8L5.5 8.5L5 10L4.5 8.5L3 8L4.5 7.5L5 6Z" fill="#3b5bdb"/>
+                            </svg>
+                        </div>
+                        <h3>Understand</h3>
+                        <p>Clean data processing with artifact detection algorithms calculates RMSSD and heart rate metrics</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 20V10" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 20V4" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 20V14" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 12L18 8L14 12" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Improve</h3>
+                        <p>Track progress with clean graphs and insights to optimize recovery, sleep, and performance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You Get Section -->
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">What You Get</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="check">✅</span>
+                        <span>Professional-grade HRV analysis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✅</span>
+                        <span>Real-time data processing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✅</span>
+                        <span>Clean, intuitive graphs</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✅</span>
+                        <span>Data export capabilities</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✅</span>
+                        <span>Long-term recordings</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✅</span>
+                        <span>Works with Polar H10</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="CorHRV" class="footer-logo-img">
+                    <span>CorHRV</span>
+                </div>
+                <p>Professional Heart Rate Variability tracking for Polar H10 users</p>
+                <p class="copyright">© 2025 CorHRV. Built for athletes, by athletes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <input 
+                    type="email" 
+                    id="adminEmail" 
+                    placeholder="Email" 
+                    required
+                    class="form-input"
+                >
+                <input 
+                    type="password" 
+                    id="adminPassword" 
+                    placeholder="Password" 
+                    required
+                    class="form-input"
+                >
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-popup">
+        <div class="success-content">
+            <span class="success-icon">✅</span>
+            <h3>You're on the list!</h3>
+            <p>We'll notify you as soon as CorHRV is ready.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorHRV - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="CorHRV Logo" class="logo-img">
+                <span class="logo-text">CorHRV Admin</span>
+            </div>
+            <div class="header-actions">
+                <button class="export-btn" id="exportBtn">📥 Export CSV</button>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Dashboard Stats -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalCount">0</div>
+                    <div class="stat-label">Total Signups</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="todayCount">0</div>
+                    <div class="stat-label">Today's Signups</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="notifiedCount">0</div>
+                    <div class="stat-label">Notified Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pendingCount">0</div>
+                    <div class="stat-label">Pending Notifications</div>
+                </div>
+            </div>
+
+            <!-- Actions Bar -->
+            <div class="actions-bar">
+                <h2>Waitlist Management</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by name or email..." class="search-input">
+                </div>
+            </div>
+
+            <!-- Waitlist Table -->
+            <div class="table-container">
+                <table id="waitlistTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Current HRV Tool</th>
+                            <th>Joined Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="waitlistBody">
+                        <!-- Table rows will be inserted here -->
+                    </tbody>
+                </table>
+                
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <p>No waitlist entries yet.</p>
+                </div>
+            </div>
+
+            <!-- Send App Link Section -->
+            <div class="send-link-section">
+                <h3>Send App Link</h3>
+                <p>When the app is ready, you can send the download link to selected users.</p>
+                <div class="link-form">
+                    <input type="text" id="appLink" placeholder="Enter app download link..." class="form-input">
+                    <button id="sendToSelected" class="action-btn primary">Send to Selected Users</button>
+                    <button id="sendToAll" class="action-btn">Send to All Pending Users</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Send App Link</h2>
+            <form id="emailForm">
+                <div class="form-group">
+                    <label>Recipients:</label>
+                    <div id="recipientList"></div>
+                </div>
+                <div class="form-group">
+                    <label>App Link:</label>
+                    <input type="text" id="modalAppLink" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Message (optional):</label>
+                    <textarea id="emailMessage" class="form-textarea" rows="4" 
+                        placeholder="Hi! CorHRV is now ready for download..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Email</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
